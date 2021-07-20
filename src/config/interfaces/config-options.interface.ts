@@ -1,0 +1,32 @@
+export interface ApiConfig {
+  host: string,
+  port: number,
+  production: boolean,
+  username: string,
+  password: string,
+  jwt_secret_auth: string,
+  jwt_expire_in_auth: string,
+  jwt_secret_verify: string,
+  jwt_expire_in_verify: string,
+  logger_api: boolean,
+  logger_database: boolean,
+  file_location: string,
+  file_max_size: number,
+}
+
+export interface DbConfig {
+  name: string,
+  host: string,
+  type: string,
+  port: number,
+  schema: string,
+  database: string,
+  username: string,
+  password: string,
+  entities: any[],
+  logging?: boolean,
+  synchronize?: boolean,
+  requestTimeout?: number,
+  timezone?: string,
+  extra?: any,
+}
